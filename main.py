@@ -1,18 +1,16 @@
-from geometry.circle import Circle
-from geometry.triangle import Triangle
-from geometry.base import Shape
+from geometry.factory import ShapeFactory
 import logging
 
 logging.basicConfig(level=logging.INFO)
 
 def main():
-    shapes: list[Shape] = [
-        Circle(radius=3),
-        Triangle(a=3, b=4, c=5)
+    shapes = [
+        ShapeFactory.create_shape("circle", radius=3),
+        ShapeFactory.create_shape("triangle", a=3, b=4, c=5),
     ]
 
     for shape in shapes:
-        print(f"{shape.__class__.__name__} area: {shape.area()}")
+        print(shape.area())
 
 if __name__ == "__main__":
     main()
