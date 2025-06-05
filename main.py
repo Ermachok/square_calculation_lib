@@ -1,7 +1,9 @@
-from geometry.factory import ShapeFactory
 import logging
 
+from geometry.factory import ShapeFactory
+
 logging.basicConfig(level=logging.INFO)
+
 
 def main():
     shapes = [
@@ -11,6 +13,7 @@ def main():
 
     for shape in shapes:
         print(shape.area())
+
 
 if __name__ == "__main__":
     main()

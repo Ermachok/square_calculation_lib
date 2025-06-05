@@ -1,4 +1,5 @@
 import pytest
+
 from geometry.circle import Circle
 
 
@@ -11,11 +12,14 @@ def test_circle_area(unit_circle):
     assert unit_circle.area() == pytest.approx(3.1416, 0.001)
 
 
-@pytest.mark.parametrize("radius, expected_area", [
-    (0, 0),
-    (1, 3.1416),
-    (2.5, 19.6349),
-])
+@pytest.mark.parametrize(
+    "radius, expected_area",
+    [
+        (0, 0),
+        (1, 3.1416),
+        (2.5, 19.6349),
+    ],
+)
 def test_circle_area_param(radius, expected_area):
     c = Circle(radius=radius)
     assert c.area() == pytest.approx(expected_area, 0.001)

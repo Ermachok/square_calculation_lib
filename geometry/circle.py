@@ -1,6 +1,7 @@
-import math
 import logging
+import math
 from dataclasses import dataclass
+
 from geometry.base import Shape
 
 logger = logging.getLogger(__name__)
@@ -15,7 +16,6 @@ class Circle(Shape):
             raise ValueError("Radius must be positive")
 
     def area(self) -> float:
-        result = math.pi * self.radius ** 2
+        result = math.pi * self.radius**2
         logger.info(f"Calculated area of circle: {result}")
         return result
-

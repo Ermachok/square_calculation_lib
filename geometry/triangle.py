@@ -1,6 +1,7 @@
-import math
 import logging
+import math
 from dataclasses import dataclass
+
 from geometry.base import Shape
 
 logger = logging.getLogger(__name__)
@@ -18,9 +19,9 @@ class Triangle(Shape):
 
     def _is_valid(self) -> bool:
         return (
-                self.a + self.b > self.c
-                and self.a + self.c > self.b
-                and self.b + self.c > self.a
+            self.a + self.b > self.c
+            and self.a + self.c > self.b
+            and self.b + self.c > self.a
         )
 
     def area(self) -> float:
