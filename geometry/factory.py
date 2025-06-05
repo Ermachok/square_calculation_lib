@@ -1,5 +1,5 @@
-from .circle import Circle
-from .triangle import Triangle
+from circle import Circle
+from triangle import Triangle
 
 
 class ShapeFactory:
